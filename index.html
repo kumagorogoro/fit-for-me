@@ -8,10 +8,20 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <img src="img/header.jpg" />
+      <header class="header">
         <div class="menu">menu</div>
-        <nav>
+        <img src="img/header.jpg" />
+        <nav class="sp">
+          <ul>
+            <li><a>パーソナルトレーニング</a></li>
+            <li><a>トレーナー</a></li>
+            <li><a>トレーニング施設</a></li>
+            <li><a>提携施設</a></li>
+            <li><a>ご利用料金</a></li>
+            <li><a>店舗情報</a></li>
+          </ul>
+        </nav>
+        <nav class="pc">
           <ul>
             <li><a>パーソナルトレーニング</a></li>
             <li><a>トレーナー</a></li>
@@ -26,7 +36,7 @@
           ><div>会員限定</div>
           <p>施設利用予約はこちら</p></a
         >
-        <h1>継続こそが、<span>結果を変える力</span></h1>
+        <h1 class="headerh1">継続こそが、<span>結果を変える力</span></h1>
         <p class="headerp">
           真の変化を手に入れるためには、<span
             >日々の積み重ねが欠かせません。</span
@@ -76,10 +86,10 @@
           </div>
         </section>
         <section class="facility">
-          <div>
-            <h2>Facility<small>設備</small></h2>
-          </div>
           <div class="fstickywrapper">
+            <div class="fstickyh2">
+              <h2>Facility<small>設備</small></h2>
+            </div>
             <div class="fsticky">
               <img src="img/facility1.jpg" />
               <p>エントランス</p>
@@ -117,7 +127,58 @@
             </p>
           </div>
         </section>
+        <section class="price">
+          <div>
+            <h2>Price<small>ご利用料金</small></h2>
+          </div>
+          <div>
+            <h3>
+              体験コース<small
+                >パーソナルトレーニング1時間<span>※体験は1回のみ</span></small
+              >
+            </h3>
+            <p>5,000円(税込)</p>
+          </div>
+          <div>
+            <h3>入会金<small>トレーニングプラン制作料金</small></h3>
+            <p>30,000円(税込)</p>
+          </div>
+          <div>
+            <h3>
+              1年契約<small
+                >月2回のパーソナルトレーニングを行います。<span
+                  >営業時間内であればご自由に施設を利用していただくことが可能です。</span
+                ><span>※施設のご利用は事前ご予約が必要です。</span
+                ><span>契約期間中の退会はできませんのでご了承ください。</span>
+              </small>
+            </h3>
+            <p>1ヶ月 20,000円(税込)</p>
+          </div>
+          <div>
+            <h3>契約ロッカー</h3>
+            <p>1ヶ月 30,000円(税込)</p>
+          </div>
+        </section>
+        <section class="access">
+          <div>
+            <h2>Access<small>店舗情報</small></h2>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.475063711151!2d139.72375041810545!3d35.66529954481541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b7bf6ceeb3f%3A0x4025f2eaf2aa9d18!2z5Zu956uL5paw576O6KGT6aSo!5e0!3m2!1sja!2sjp!4v1735451237110!5m2!1sja!2sjp"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div>
+            <p>〒100-8602 東京都</p>
+            <p>TEL ◯1-1234-5678</p>
+            <p>営業時間 10:00~22:00</p>
+            <p>定休日 月・火</p>
+          </div>
+        </section>
       </main>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
