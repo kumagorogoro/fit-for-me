@@ -104,7 +104,7 @@ header h1 span {
 }
 @media screen and (min-width: 768px) {
   header {
-    height: 210vh;
+    height: 230vh;
   }
   heder img {
     height: 100vh;
@@ -132,13 +132,14 @@ header h1 span {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .pc {
     display: block;
     color: white;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
   }
   .pc ul {
     background: black;
@@ -147,8 +148,12 @@ header h1 span {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 2%;
     list-style: none;
+  }
+  .pc ul li a {
+    color: white;
+    text-decoration: none;
   }
   .menu {
     display: none;
@@ -156,36 +161,46 @@ header h1 span {
   .logo {
     display: none;
     font-size: 4rem;
-    top: 10%;
+    top: 11%;
+    left: 20%;
+    position: absolute;
+    z-index: 100;
   }
-  .logo2 {
-    display: block;
-    margin-left: 10%;
-    color: white;
-    font-size: 5.5rem;
-    margin-top: 10%;
-    margin-left: 68%;
-    line-height: 6rem;
-  }
+
   .headerh1 {
-    font-size: 4rem;
-    margin-left: 5%;
+    font-size: 6rem;
+    margin-left: 20%;
     padding-top: 5%;
   }
   .headerp {
-    font-size: 1.5rem;
-    padding-top: 1%;
-    margin-left: 20%;
+    font-size: 2.5rem;
+    padding-top: 0.5%;
+    margin-left: 28%;
   }
   .headerp2 {
-    font-size: 1.5rem;
-    padding-top: 1%;
-    margin-left: 5%;
+    font-size: 2.5rem;
+    padding-top: 0.5%;
+    margin-left: 20%;
   }
-
+  header {
+    height: 220vh;
+  }
   header img {
-    margin: auto;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 2%;
     object-fit: contain;
+  }
+  .reservation {
+    height: 5vh;
+    width: 20vw;
+    left: 80%;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+  .reservation p {
+    font-size: 1rem;
   }
 }
 /* personal */
@@ -240,6 +255,27 @@ h2 small {
   .p3 {
     font-size: 1.2rem;
   }
+  @media screen and (min-width: 1200px) {
+    .personal {
+      padding-top: 0%;
+    }
+    h2 {
+      font-size: 5rem;
+    }
+    h2 small {
+      font-size: 1.5rem;
+    }
+    .p1 h3,
+    .p2 h3,
+    .p3 h3 {
+      font-size: 2.5rem;
+    }
+    .p1,
+    .p2,
+    .p3 {
+      font-size: 1.5rem;
+    }
+  }
 }
 /* trainer */
 .cycle {
@@ -279,6 +315,15 @@ h2 small {
   }
   .cycle h3 {
     font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cycle {
+    width: 300px;
+    height: 300px;
+  }
+  .cycle h3 {
+    font-size: 3rem;
   }
 }
 /* facility */
@@ -336,6 +381,15 @@ h2 small {
     font-size: 1.2rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  .facility div p {
+    font-size: 1.5rem;
+  }
+  #pgray {
+    font-size: 1.5rem;
+    right: 18%;
+  }
+}
 /* partner */
 .partner {
   color: black;
@@ -368,6 +422,17 @@ h2 small {
 
   .partner div p span {
     font-size: 1.2rem;
+  }
+  .partner div:nth-of-type(3) {
+    width: fit-content;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .partner div p {
+    font-size: 3rem;
+  }
+  .partner div p span {
+    font-size: 1.5rem;
   }
 }
 /* price */
@@ -425,6 +490,17 @@ h2 small {
     font-size: 1.8rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  .price div:nth-of-type(n + 2) h3 {
+    font-size: 3rem;
+  }
+  .price div h3 small {
+    font-size: 1.5rem;
+  }
+  .price div p {
+    font-size: 3rem;
+  }
+}
 /*access */
 .access {
   height: 100vh;
@@ -444,5 +520,10 @@ iframe {
 @media screen and (min-width: 767px) {
   .access div p {
     font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .access div p {
+    font-size: 1.5rem;
   }
 }

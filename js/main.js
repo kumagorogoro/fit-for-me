@@ -12,10 +12,10 @@ window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
 
   // スクリーン幅が1000px以下の場合のみ実行
-  if (window.innerWidth <= 1000) {
+  if (window.innerWidth <= 1200) {
     // スクロール量がセクションの位置を超えると、ヘッダーを徐々に表示
     if (scrollY > headerBottom) {
-      const opacity = Math.min((scrollY - headerBottom) / 200, 1); // opacityを滑らかに変更
+      const opacity = Math.min((scrollY - headerBottom) / 0, 1); // opacityを滑らかに変更
       menu.classList.add("background");
       logo.style.display = "none"; // opacityでフェードイン・フェードアウト
     } else {
@@ -24,7 +24,7 @@ window.addEventListener("scroll", function () {
     }
   }
   // スクリーン幅が1000px以下の場合のみ実行
-  if (window.innerWidth >= 1000) {
+  if (window.innerWidth >= 1200) {
     // スクロール量がセクションの位置を超えると、ヘッダーを徐々に表示
     if (scrollY > headerBottom) {
       logo.style.display = "none"; // opacityでフェードイン・フェードアウト
