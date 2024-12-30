@@ -70,7 +70,8 @@ nav {
   gap: 5%;
   background-color: rgb(31, 31, 31);
   z-index: 10;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.414);
+  text-decoration: none;
+  color: white;
 }
 
 header p span {
@@ -196,8 +197,6 @@ header h1 span {
     width: 20vw;
     left: 80%;
     font-size: 1rem;
-    color: white;
-    text-decoration: none;
   }
   .reservation p {
     font-size: 1rem;
