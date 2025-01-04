@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>会員番号と氏名・予約日・予約時間入力フォーム</title>
+    <link rel="stylesheet" href="css/reservation.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>会員番号・氏名・予約日・予約時間入力</h2>
+      <form id="reservationForm" action="#" method="post">
+        <!-- 会員番号 -->
+        <label for="memberNumber">会員番号：</label>
+        <input
+          type="text"
+          id="memberNumber"
+          name="memberNumber"
+          placeholder="例: 12345678"
+          required
+        />
+        <div id="errorNumber" class="error"></div>
+
+        <!-- 氏名 -->
+        <label for="fullName">氏名：</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="氏名を入力"
+          required
+        />
+        <div id="errorName" class="error"></div>
+
+        <!-- 予約日 -->
+        <label for="reservationDate">予約日：</label>
+        <input
+          type="date"
+          id="reservationDate"
+          name="reservationDate"
+          required
+        />
+        <div id="errorDate" class="error"></div>
+
+        <!-- 予約時間 -->
+        <label for="reservationTime">予約時間：</label>
+        <input
+          type="time"
+          id="reservationTime"
+          name="reservationTime"
+          required
+        />
+        <div id="errorTime" class="error"></div>
+
+        <input type="submit" value="送信" />
+      </form>
+    </div>
+    <a href="index.html">トップページへ戻る</a>
+  </body>
+</html>

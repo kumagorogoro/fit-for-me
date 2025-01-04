@@ -12,14 +12,49 @@ img {
   width: 100%;
   max-width: 1200px;
   color: white;
+  font-family: "fot-matisse-pron", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+h2 {
+  font-size: 2.8rem;
+  line-height: 3.1rem;
+  font-family: "natalya", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  width: fit-content;
+  margin-top: 20%;
+  margin-left: 10%;
+}
+.menu {
+  font-size: 2.5rem;
+  font-family: "natalya", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h2 small {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  font-weight: 100;
+  display: block;
+  font-family: "fot-matisse-pron", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-left: 10%;
 }
 /* header */
 header {
   position: relative;
-  height: 210vh;
+  height: 145vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 255, 0),
+    rgba(0, 0, 0, 0.131)
+  );
 }
 header img {
-  height: 110vh;
+  height: 90vh;
   position: sticky;
   top: 0;
   left: 0;
@@ -30,22 +65,22 @@ nav {
   display: none;
 }
 .logo {
+  display: block;
+  z-index: 10;
   position: fixed;
   top: 2%;
   left: 5%;
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  z-index: 1000;
 }
-.logo2 {
-  display: none;
-}
+.logo img {
+  width: 50%;
+  height: fit-content;
 
+  object-fit: contain;
+}
 .menu {
   position: fixed;
   top: 0%;
   right: 0%;
-  font-size: 1.2rem;
   z-index: 1000;
   padding-right: 5%;
   width: 100vw;
@@ -77,28 +112,37 @@ nav {
 header p span {
   display: block;
 }
+.gold {
+  color: rgb(252, 239, 174);
+}
 header h1,
 header p {
   z-index: 1; /* テキストが画像の上に表示されるようにする */
 }
 header h1 {
-  color: white;
+  color: rgba(255, 213, 0);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.414);
   font-size: 2.8rem;
-  margin-top: 50%;
   margin-left: 5%;
 }
 header p {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.414);
   font-size: 1.2rem;
 }
+.headerh1 {
+  line-height: 3.5rem;
+}
 .headerp {
   margin-left: 20%;
   margin-top: 2%;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
 }
 .headerp2 {
   margin-left: 5%;
   margin-top: 2%;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
 }
 header h1 span {
   display: block;
@@ -107,8 +151,10 @@ header h1 span {
   header {
     height: 230vh;
   }
-  heder img {
+  header img {
     height: 100vh;
+    object-fit: contain;
+    object-position: top;
   }
   .logo {
     font-size: 5rem;
@@ -173,6 +219,7 @@ header h1 span {
     margin-left: 20%;
     padding-top: 5%;
   }
+
   .headerp {
     font-size: 2.5rem;
     padding-top: 0.5%;
@@ -204,25 +251,10 @@ header h1 span {
 }
 /* personal */
 
-.personal {
-  padding-top: 20%;
-}
-h2 {
-  color: black;
-  width: fit-content;
-  margin: 10%;
-  font-size: 2rem;
-}
-h2 small {
-  font-size: 1rem;
-  font-weight: 100;
-  display: block;
-  line-height: 4%;
-}
 .p1,
 .p2,
 .p3 {
-  width: 80%;
+  width: 85%;
   margin: 5% auto;
   padding: 5%;
   color: black;
@@ -236,8 +268,11 @@ h2 small {
 .p1 h3,
 .p2 h3,
 .p3 h3 {
+  background: rgba(250, 229, 127, 0.8);
+  padding: 5%;
   margin-bottom: 3%;
   font-size: 1.2rem;
+  border-radius: 8px;
 }
 @media screen and (min-width: 767px) {
   h2 {
@@ -278,7 +313,7 @@ h2 small {
 }
 /* trainer */
 .cycle {
-  border: 5px solid rgba(135, 135, 135, 0.5);
+  border: 2px solid rgba(135, 135, 135, 0.5);
   background: white;
   width: 120px;
   height: 120px;
@@ -291,8 +326,8 @@ h2 small {
 }
 .cycle {
   position: absolute;
-  top: -3%;
-  left: 20%;
+  top: -25%;
+  left: 25%;
   transform: translate(-50%, -50%);
 }
 .cycle h3 {
@@ -303,9 +338,13 @@ h2 small {
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
   text-align: center;
+  font-family: "fot-matisse-pron", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 .trainer div:nth-of-type(1) {
-  margin-bottom: 25%;
+  margin-top: 20%;
+  margin-bottom: 15vw;
 }
 @media screen and (min-width: 767px) {
   .cycle {
@@ -331,8 +370,8 @@ h2 small {
 }
 .fstickyh2 {
   position: sticky;
-  top: 15%;
-  height: 15vh;
+  top: 25vw;
+  margin-bottom: 5%;
 }
 .facility img {
   height: 40vh;
@@ -341,7 +380,7 @@ h2 small {
 
 .fsticky {
   position: sticky;
-  top: 28%;
+  top: 46vw;
   height: 40vh;
 }
 .facility div p {
@@ -351,9 +390,6 @@ h2 small {
   font-size: 1rem;
 }
 
-.facility div:nth-of-type(6) {
-  margin-bottom: 10%;
-}
 .pgraywrapper {
   position: static;
   height: 30%;
@@ -397,17 +433,24 @@ h2 small {
   font-weight: bold;
   font-size: 1.2rem;
 }
+.partner div p a {
+  color: black;
+}
 .partner div p span {
   display: block;
   font-size: 1rem;
   font-weight: 100;
+  line-height: 1.5rem;
 }
 .partner div p span:nth-of-type(1) {
   margin-top: 2%;
 }
+.partner div:nth-of-type(2) {
+  margin-top: 5%;
+}
 .partner div:nth-of-type(3) {
   width: 80%;
-  margin: 5% auto 10%;
+  margin: 0% auto 10%;
   color: black;
 }
 @media screen and (min-width: 767px) {
@@ -442,31 +485,43 @@ h2 small {
 .price div:nth-of-type(n + 2) {
   font-size: 1.2rem;
   width: 80%;
-  margin: 10% auto;
-  border-bottom: 5px solid rgba(135, 135, 135, 0.5);
+  margin: 0% auto 5%;
+  border-bottom: 2px solid rgba(135, 135, 135, 0.5);
+  border-right: 2px solid rgba(135, 135, 135, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
   position: relative;
 }
-
+.price div:nth-of-type(2) {
+  margin-top: 5%;
+}
+.price div:nth-of-type(5) {
+  margin-bottom: 10%;
+}
 .price div:nth-of-type(2),
 .price div:nth-of-type(3),
 .price div:nth-of-type(5) {
   height: 20vh;
 }
 .price div:nth-of-type(4) {
-  height: 30vh;
+  height: 35vh;
 }
 .price div:nth-of-type(n + 2) p {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 5%;
+  right: 5%;
+}
+.price div:nth-of-type(n + 2) {
+  background: rgba(250, 229, 127, 0.8);
+  padding: 5%;
+  border-radius: 8px;
 }
 .price div span {
   display: block;
   font-weight: 100;
+  line-height: 1.2rem;
 }
 .price div h3 small {
   display: block;
@@ -502,7 +557,7 @@ h2 small {
 }
 /*access */
 .access {
-  height: 100vh;
+  height: 85vh;
   color: black;
 }
 iframe {
@@ -511,10 +566,17 @@ iframe {
   margin: 0 auto;
   display: block;
 }
+.access div:nth-of-type(1) {
+  margin-bottom: 5%;
+}
 .access div:nth-of-type(2) {
   width: 80%;
   margin: 2% auto;
   text-align: left;
+}
+.access div p {
+  line-height: 1.5rem;
+  margin-left: 2%;
 }
 @media screen and (min-width: 767px) {
   .access div p {
