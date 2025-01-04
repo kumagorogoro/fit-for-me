@@ -48,6 +48,11 @@ h2 small {
     font-size: 25px;
   }
 }
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 30px;
+  }
+}
 /* header */
 header {
   position: relative;
@@ -206,31 +211,59 @@ header h1 span {
   }
 
   .headerh1 {
-    margin-left: 20%;
     padding-top: 5%;
+    margin-left: 10%;
   }
 
   .headerp {
     padding-top: 0.5%;
-    margin-left: 28%;
+    margin-left: 10%;
   }
   .headerp2 {
     padding-top: 0.5%;
-    margin-left: 20%;
+    margin-left: 10%;
   }
   header {
-    height: 220vh;
+    height: 160vh;
+    width: 75%;
+    margin: 0 auto;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 255, 0),
+      rgba(0, 0, 0, 0.3)
+    );
   }
   header img {
     height: 100vh;
     margin: 0 auto;
     padding-top: 2%;
     object-fit: contain;
+    top: 5%;
   }
   .reservation {
-    height: 5vh;
-    width: 20vw;
-    left: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 18vw;
+    left: 82vw;
+    font-size: 1rem;
+  }
+  .reservation p {
+    display: block;
+    width: 18vw;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  .reservation div {
+    width: 18vw;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 /* personal */
@@ -310,7 +343,15 @@ header h1 span {
   margin-top: 20%;
   margin-bottom: 15vw;
 }
-
+.cycle {
+  width: 350px;
+  height: 350px;
+}
+@media screen and (min-width: 1200px) {
+  .trainer div:nth-of-type(1) {
+    margin-bottom: 15%;
+  }
+}
 /* facility */
 .facility {
   position: relative;
@@ -358,11 +399,7 @@ header h1 span {
     height: 50vh;
   }
 }
-@media screen and (min-width: 1200px) {
-  #pgray {
-    right: 18%;
-  }
-}
+
 /* partner */
 .partner {
   color: black;
