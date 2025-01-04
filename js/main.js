@@ -62,9 +62,9 @@ window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
 
   // スクリーン幅が1200px以下の場合のみ実行
-  if (window.innerWidth <= 1200) {
+  if (window.innerWidth <= 767) {
     // headerTopより50px上でlogoが消えるようにする
-    if (scrollY > headerTop + 0) {
+    if (scrollY > headerTop - 200) {
       // 50px上でlogoをフェードアウト
       logo.style.opacity = 0; // opacityを0にしてフェードアウト
     } else {
@@ -73,9 +73,9 @@ window.addEventListener("scroll", function () {
     }
   }
   // スクリーン幅が1200px以下の場合のみ実行
-  if (window.innerWidth <= 767) {
+  if (window.innerWidth <= 1200) {
     // headerTopより50px上でlogoが消えるようにする
-    if (scrollY > headerTop - 160) {
+    if (scrollY > headerTop - 200) {
       // 50px上でlogoをフェードアウト
       logo.style.opacity = 0; // opacityを0にしてフェードアウト
     } else {
