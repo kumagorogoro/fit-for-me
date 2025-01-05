@@ -26,7 +26,20 @@
   };
   s.parentNode.insertBefore(tk, s);
 })(document);
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
+    // 対象の要素を取得
+    const target = document.querySelector(this.getAttribute("href"));
+
+    // スクロール位置を50px上に調整
+    window.scrollTo({
+      top: target.offsetTop - 150, // 50px上にスクロール
+      behavior: "smooth", // スムーススクロール
+    });
+  });
+});
 // 固定ヘッダーの要素を取得
 const menu = document.querySelector(".menu");
 
