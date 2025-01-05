@@ -131,8 +131,6 @@ header {
 }
 .logo img {
   width: 50%;
-  height: fit-content;
-
   object-fit: contain;
 }
 .menu {
@@ -268,9 +266,9 @@ header h1 span {
     z-index: 1000;
   }
   .logopc a img {
-    height: fit-content;
     max-width: 1000px;
     width: 80vw;
+    height: 30vh;
     object-fit: contain;
   }
   .pc-container {
