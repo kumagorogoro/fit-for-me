@@ -52,25 +52,34 @@ h2 small {
   html {
     font-size: 30px;
   }
+  h2 {
+    font-size: 4rem;
+  }
+  h2 small {
+    line-height: 1.2rem;
+  }
 }
 /* header */
 header {
   position: relative;
-  height: 145vh;
+  height: 160vh;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 255, 0),
     rgba(0, 0, 0, 0.436)
   );
 }
-header img {
-  height: 90vh;
+.pc-container {
+  height: 100vh;
   position: sticky;
   top: 0;
   left: 0;
+  z-index: -1;
+}
+.pc-container img {
+  height: 100vh;
   object-fit: cover;
   object-position: top;
-  z-index: -1;
 }
 nav {
   display: none;
@@ -117,7 +126,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 5%;
-  background-color: rgb(31, 31, 31);
+  background: rgb(31, 31, 31);
   z-index: 10;
   text-decoration: none;
   color: white;
@@ -163,7 +172,7 @@ header h1 span {
 }
 @media screen and (min-width: 768px) {
   header {
-    height: 160vh;
+    height: 170vh;
   }
   header img {
     height: 100vh;
@@ -207,12 +216,27 @@ header h1 span {
     display: none;
   }
   .logo {
-    top: 7%;
-    left: 5vw;
-    z-index: 100;
-    width: 800px;
+    display: none;
   }
-
+  .logopc {
+    display: block;
+    width: 350px;
+    height: 200px;
+  }
+  .logopc a img {
+    position: absolute;
+    object-fit: contain;
+    right: 0%;
+    bottom: -60%;
+    width: 80vw;
+    max-width: 1000px;
+  }
+  .pc-container {
+    width: 1200px;
+    top: 4%;
+    z-index: -1;
+    display: flex;
+  }
   .headerh1 {
     padding-top: 5%;
     margin-left: 10%;
@@ -229,47 +253,53 @@ header h1 span {
     text-shadow: 10px 0 20px rgb(113, 113, 113);
   }
   header {
-    height: 167vh;
+    height: 177vh;
     width: 65vh;
     background: none;
-    margin: 0 auto;
   }
+
   header img {
     height: 100vh;
     margin: 0 auto;
     padding-top: 2%;
     object-fit: contain;
-    top: 5%;
   }
   .reservation {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 18vw;
-    left: 81.8vw;
+    width: 25vw;
+    left: 74.8vw;
     bottom: 0.2vw;
     font-size: 1rem;
     border-radius: 8px;
+    background: radial-gradient(
+      ellipse at center,
+      rgb(248, 230, 159) 0%,
+      rgb(239, 230, 155) 28%,
+      rgb(236, 230, 155) 18%,
+      rgba(255, 255, 255, 0) 70%
+    );
   }
   .reservation p {
     display: block;
-    width: 18vw;
-    background-color: rgb(31, 31, 31);
+    width: 20vw;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
+    color: black;
   }
   .reservation div {
-    width: 18vw;
-    background-color: rgb(31, 31, 31);
+    width: 20vw;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
+    color: black;
   }
 }
 /* personal */
