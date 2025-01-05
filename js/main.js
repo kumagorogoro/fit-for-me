@@ -26,18 +26,30 @@
   };
   s.parentNode.insertBefore(tk, s);
 })(document);
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
-    // 対象の要素を取得
     const target = document.querySelector(this.getAttribute("href"));
-
-    // スクロール位置を50px上に調整
-    window.scrollTo({
-      top: target.offsetTop - 150, // 50px上にスクロール
-      behavior: "smooth", // スムーススクロール
-    });
+    if (window.innerWidth <= 767) {
+      window.scrollTo({
+        top: target.offsetTop - 70,
+        behavior: "smooth",
+      });
+    }
+    if (window.innerWidth >= 767) {
+      window.scrollTo({
+        top: target.offsetTop - 140,
+        behavior: "smooth",
+      });
+    }
+    if (window.innerWidth >= 1200) {
+      window.scrollTo({
+        top: target.offsetTop - 150,
+        behavior: "smooth",
+      });
+    }
   });
 });
 // 固定ヘッダーの要素を取得
@@ -105,4 +117,22 @@ window.addEventListener("scroll", function () {
       logo.style.opacity = 1; // opacityを1にしてフェードイン
     }
   }
+});
+const menuBtn = document.querySelector(".menu");
+const sp = document.querySelector("#sp");
+const closeBtn = document.querySelector(".close");
+const links = document.querySelectorAll("#sp li a");
+
+menuBtn.addEventListener("click", function () {
+  sp.style.display = "block"; // メニューを表示
+});
+
+closeBtn.addEventListener("click", function () {
+  sp.style.display = "none"; // メニューを非表示
+});
+
+links.forEach(function (link) {
+  link.addEventListener("click", function () {
+    sp.style.display = "none"; // リンククリック時にメニューを非表示
+  });
 });

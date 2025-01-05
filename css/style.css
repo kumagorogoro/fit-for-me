@@ -85,8 +85,39 @@ header {
   object-fit: cover;
   object-position: top;
 }
-nav {
+.pc {
   display: none;
+}
+#sp {
+  display: none;
+  background: rgba(31, 31, 31, 0.836);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+#sp ul {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 5%;
+}
+#sp ul li a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.close {
+  position: fixed;
+  top: 3vw;
+  right: 3vw;
+  font-size: 3rem;
 }
 .logo {
   display: block;
@@ -199,7 +230,7 @@ header h1 span {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 10000;
   }
   .pc ul {
     background: rgb(31, 31, 31);
@@ -227,34 +258,47 @@ header h1 span {
     width: 350px;
     height: 200px;
   }
-  .logopc a img {
+  .logopc a {
     position: absolute;
-    object-fit: contain;
     right: 0%;
-    bottom: -60%;
+    bottom: 8%;
     width: 80vw;
     max-width: 1000px;
+    height: fit-content;
+    z-index: 1000;
+  }
+  .logopc a img {
+    height: fit-content;
+    max-width: 1000px;
+    width: 80vw;
+    object-fit: contain;
   }
   .pc-container {
     width: 1200px;
     top: 4%;
-    z-index: -1;
     display: flex;
+    z-index: 10;
   }
   .headerh1 {
     padding-top: 5%;
     margin-left: 10%;
+    z-index: 1000;
+    position: relative;
   }
 
   .headerp {
     padding-top: 0.5%;
     margin-left: 10%;
     text-shadow: 10px 0 20px rgb(113, 113, 113);
+    z-index: 1000;
+    position: relative;
   }
   .headerp2 {
     padding-top: 0.5%;
     margin-left: 10%;
     text-shadow: 10px 0 20px rgb(113, 113, 113);
+    z-index: 1000;
+    position: relative;
   }
   header {
     height: 177vh;
