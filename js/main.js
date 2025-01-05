@@ -86,7 +86,7 @@ window.addEventListener("scroll", function () {
   // スクリーン幅が1200px以上の場合のみ実行
   if (window.innerWidth >= 1200) {
     // スクロール量がセクションの位置を超えると、logoを非表示
-    if (scrollY > headerTop) {
+    if (scrollY > headerTop - 200) {
       logo.style.opacity = 0; // opacityを0にしてフェードアウト
     } else {
       logo.style.opacity = 1; // opacityを1にしてフェードイン
