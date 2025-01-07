@@ -2,7 +2,6 @@
 html {
   scroll-behavior: smooth; /* スムーススクロール */
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -31,12 +30,6 @@ h2 {
   margin-top: 20%;
   margin-left: 10%;
 }
-.menu {
-  font-size: 2.5rem;
-  font-family: "natalya", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 h2 small {
   font-size: 0.8rem;
   line-height: 0.8rem;
@@ -63,6 +56,7 @@ h2 small {
     line-height: 1.2rem;
   }
 }
+
 /* header */
 header {
   position: relative;
@@ -72,6 +66,22 @@ header {
     rgba(0, 0, 255, 0),
     rgba(0, 0, 0, 0.436)
   );
+}
+.menu {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  z-index: 1000;
+  padding-right: 5%;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 2.5rem;
+  font-family: "natalya", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .pc-container {
   height: 100vh;
@@ -84,9 +94,6 @@ header {
   height: 100vh;
   object-fit: cover;
   object-position: top;
-}
-.pc {
-  display: none;
 }
 #sp {
   display: none;
@@ -113,6 +120,9 @@ header {
   font-size: 1.5rem;
   text-decoration: none;
 }
+.pc {
+  display: none;
+}
 .close {
   position: fixed;
   top: 3vw;
@@ -133,18 +143,6 @@ header {
   width: 50%;
   object-fit: contain;
 }
-.menu {
-  position: fixed;
-  top: 0%;
-  right: 0%;
-  z-index: 1000;
-  padding-right: 5%;
-  width: 100vw;
-  height: 50px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
 .background {
   background: rgb(31, 31, 31);
 }
@@ -164,17 +162,9 @@ header {
   text-decoration: none;
   color: white;
 }
-
-header p span {
-  display: block;
-}
-.gold {
-  color: white;
-  text-shadow: #fc0 1px 0 10px;
-}
 header h1,
 header p {
-  z-index: 1; /* テキストが画像の上に表示されるようにする */
+  z-index: 1;
 }
 header h1 {
   color: white;
@@ -184,24 +174,26 @@ header h1 {
 }
 header p {
   font-size: 1.2rem;
-}
-.headerh1 {
-  line-height: 3.5rem;
-}
-.headerp {
-  margin-left: 20%;
-  margin-top: 2%;
-  line-height: 1.8rem;
-  font-size: 1.2rem;
-}
-.headerp2 {
-  margin-left: 5%;
-  margin-top: 2%;
   line-height: 1.8rem;
   font-size: 1.2rem;
 }
 header h1 span {
   display: block;
+}
+header p span {
+  display: block;
+}
+.headerp {
+  margin-left: 20%;
+  margin-top: 2%;
+}
+.headerp2 {
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.gold {
+  color: white;
+  text-shadow: #fc0 1px 0 10px;
 }
 @media screen and (min-width: 768px) {
   header {
@@ -211,17 +203,37 @@ header h1 span {
     height: 100vh;
     object-position: top;
   }
+   .menu {
+    padding: 5%;
+  }
   header h1 {
     padding-top: 5%;
   }
   .logo {
     top: 3%;
   }
-  .menu {
-    padding: 5%;
-  }
 }
 @media screen and (min-width: 1200px) {
+  header {
+    height: 177vh;
+    width: 65vh;
+    background: none;
+  }
+  header img {
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 2%;
+    object-fit: contain;
+  }
+    .menu {
+    display: none;
+  }
+  .pc-container {
+    width: 1200px;
+    top: 4%;
+    display: flex;
+    z-index: 10;
+  }
   .pc {
     display: block;
     color: white;
@@ -244,9 +256,6 @@ header h1 span {
   .pc ul li a {
     color: white;
     text-decoration: none;
-  }
-  .menu {
-    display: none;
   }
   .logo {
     display: none;
@@ -271,19 +280,12 @@ header h1 span {
     height: 30vh;
     object-fit: contain;
   }
-  .pc-container {
-    width: 1200px;
-    top: 4%;
-    display: flex;
-    z-index: 10;
-  }
   .headerh1 {
     padding-top: 5%;
     margin-left: 10%;
     z-index: 1000;
     position: relative;
   }
-
   .headerp {
     padding-top: 0.5%;
     margin-left: 10%;
@@ -297,18 +299,6 @@ header h1 span {
     text-shadow: 10px 0 20px rgb(113, 113, 113);
     z-index: 1000;
     position: relative;
-  }
-  header {
-    height: 177vh;
-    width: 65vh;
-    background: none;
-  }
-
-  header img {
-    height: 100vh;
-    margin: 0 auto;
-    padding-top: 2%;
-    object-fit: contain;
   }
   .reservation {
     display: flex;
@@ -348,6 +338,7 @@ header h1 span {
     color: black;
   }
 }
+
 /* personal */
 .p1,
 .p2,
@@ -383,7 +374,6 @@ header h1 span {
   .p3 h3 {
     margin-bottom: 3%;
   }
-
   @media screen and (min-width: 1200px) {
     .personal {
       padding-top: 0%;
@@ -406,6 +396,7 @@ header h1 span {
     }
   }
 }
+
 /* trainer */
 .cycle {
   border: 2px solid rgba(135, 135, 135, 0.5);
@@ -441,7 +432,6 @@ header h1 span {
   margin-top: 20%;
   margin-bottom: 15vw;
 }
-
 @media screen and (min-width: 1200px) {
   .trainer div:nth-of-type(1) {
     margin-bottom: 15%;
@@ -453,6 +443,7 @@ header h1 span {
     max-height: 300px;
   }
 }
+
 /* facility */
 .facility {
   position: relative;
@@ -466,7 +457,6 @@ header h1 span {
   height: 40vh;
   object-fit: cover;
 }
-
 .fsticky {
   position: sticky;
   top: 27%;
@@ -478,7 +468,6 @@ header h1 span {
   right: 5%;
   font-size: 1rem;
 }
-
 .pgraywrapper {
   position: static;
   height: 30%;
@@ -606,6 +595,7 @@ header h1 span {
   font-weight: bold;
   text-align: right;
 }
+
 /*access */
 .access {
   height: 85vh;
