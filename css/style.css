@@ -491,7 +491,7 @@ header p span {
     height: 50vh;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .fstickyh2 {
     top: 10%;
   }
