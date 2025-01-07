@@ -1,6 +1,6 @@
 @charset "utf-8";
 html {
-  scroll-behavior: smooth; /* スムーススクロール */
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -21,7 +21,7 @@ img {
 }
 h2 {
   font-size: 2.8rem;
-  line-height: 3.1rem;
+  line-height: 1;
   font-family: "natalya", sans-serif;
   font-weight: bold;
   font-style: normal;
@@ -32,7 +32,7 @@ h2 {
 }
 h2 small {
   font-size: 0.8rem;
-  line-height: 0.8rem;
+  line-height: 0.8;
   font-weight: 100;
   display: block;
   font-family: "fot-matisse-pron", sans-serif;
@@ -53,7 +53,7 @@ h2 small {
     font-size: 4rem;
   }
   h2 small {
-    line-height: 1.2rem;
+    line-height: 1.2;
   }
 }
 
@@ -170,11 +170,12 @@ header h1 {
   color: white;
   text-shadow: #fc0 1px 0 10px;
   font-size: 2.8rem;
+  line-height: 1.1;
   margin-left: 5%;
 }
 header p {
   font-size: 1.2rem;
-  line-height: 1.8rem;
+  line-height: 1.5;
   font-size: 1.2rem;
 }
 header h1 span {
@@ -203,7 +204,7 @@ header p span {
     height: 100vh;
     object-position: top;
   }
-   .menu {
+  .menu {
     padding: 5%;
   }
   header h1 {
@@ -225,7 +226,7 @@ header p span {
     padding-top: 2%;
     object-fit: contain;
   }
-    .menu {
+  .menu {
     display: none;
   }
   .pc-container {
@@ -490,7 +491,14 @@ header p span {
     height: 50vh;
   }
 }
-
+@media screen and (min-width: 1024px) {
+  .fstickyh2 {
+    top: 10%;
+  }
+  .fsticky {
+    top: 25.5%;
+  }
+}
 /* partner */
 .partner {
   color: black;
@@ -506,7 +514,7 @@ header p span {
   display: block;
   font-size: 1rem;
   font-weight: 100;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 .partner div p span:nth-of-type(1) {
   margin-top: 2%;
@@ -581,7 +589,7 @@ header p span {
   display: block;
   font-weight: 100;
   font-size: 0.8rem;
-  line-height: 1.2rem;
+  line-height: 1.2;
 }
 .price div h3 {
   text-shadow: 4px 0px 3px rgb(255, 255, 255);
@@ -616,12 +624,12 @@ iframe {
   text-align: left;
 }
 .access div p {
-  line-height: 1.5rem;
+  line-height: 1.5;
   margin-left: 2%;
 }
 @media screen and (min-width: 1200px) {
   .access div p {
     font-size: 1rem;
-    line-height: 1.4rem;
+    line-height: 1.4;
   }
 }
