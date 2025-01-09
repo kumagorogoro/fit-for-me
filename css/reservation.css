@@ -18,9 +18,9 @@ body {
     rgb(248, 230, 159) 100%
   );
   border-radius: 8px;
-  width: 90%;
+  width: 80%;
   max-width: 1000px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -82,7 +82,7 @@ a {
   margin: auto;
   color: black;
   position: fixed;
-  bottom: 8%;
+  bottom: 2%;
   left: 50%;
   transform: translateX(-50%);
 }

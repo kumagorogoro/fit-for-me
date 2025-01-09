@@ -28,7 +28,7 @@ h2 {
   color: black;
   width: fit-content;
   margin-top: 20%;
-  margin-left: 10%;
+  margin-left: 8%;
 }
 h2 small {
   font-size: 0.8rem;
@@ -38,7 +38,7 @@ h2 small {
   font-family: "fot-matisse-pron", sans-serif;
   font-weight: 500;
   font-style: normal;
-  margin-left: 10%;
+  margin-left: 3%;
 }
 @media screen and (min-width: 767px) {
   html {
@@ -336,7 +336,7 @@ header p span {
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
-    color: black;
+    color: rgb(31, 31, 31);
   }
 }
 
@@ -344,7 +344,7 @@ header p span {
 .p1,
 .p2,
 .p3 {
-  width: 85%;
+  width: 87%;
   margin: 5% auto;
   padding: 5%;
   color: black;
@@ -542,7 +542,7 @@ header p span {
 }
 .price div:nth-of-type(n + 2) {
   font-size: 1.2rem;
-  width: 80%;
+  width: 90%;
   margin: 0% auto 5%;
   border-bottom: 2px solid rgba(135, 135, 135, 0.5);
   border-right: 2px solid rgba(135, 135, 135, 0.5);
@@ -561,10 +561,10 @@ header p span {
 .price div:nth-of-type(2),
 .price div:nth-of-type(3),
 .price div:nth-of-type(5) {
-  height: 20vh;
+  height: 200px;
 }
 .price div:nth-of-type(4) {
-  height: 35vh;
+  height: 200px;
 }
 .price div:nth-of-type(n + 2) p {
   position: absolute;
@@ -632,4 +632,22 @@ iframe {
     font-size: 1rem;
     line-height: 1.4;
   }
+}
+/* footer */
+footer {
+  margin-bottom: 25%;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer ul li {
+  margin: 0 2%;
+}
+footer li a {
+  font-size: 0.5rem;
+  text-decoration: none;
+  color: black;
 }
