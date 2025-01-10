@@ -32,7 +32,7 @@ h2 {
 }
 h2 small {
   font-size: 0.8rem;
-  line-height: 0.8;
+  line-height: 1.5rem;
   font-weight: 100;
   display: block;
   font-family: "fot-matisse-pron", sans-serif;
@@ -47,9 +47,6 @@ h2 small {
   }
 }
 @media screen and (min-width: 1024px) {
-  html {
-    font-size: 40px;
-  }
   h2 {
     font-size: 4rem;
     margin: 20% auto 0;
@@ -64,6 +61,9 @@ h2 small {
   }
   h2 {
     margin: 0 auto;
+  }
+  h2 small {
+    font-size: 1rem;
   }
 }
 /* header */
@@ -225,7 +225,7 @@ header p span {
 }
 @media screen and (min-width: 1200px) {
   header {
-    height: 182vh;
+    height: 185vh;
     width: 65vh;
     background: none;
   }
@@ -234,6 +234,12 @@ header p span {
     margin: 0 auto;
     padding-top: 2%;
     object-fit: contain;
+  }
+  header h1 {
+    font-size: 5rem;
+  }
+  header p {
+    font-size: 2rem;
   }
   .menu {
     display: none;
@@ -264,7 +270,7 @@ header p span {
     align-items: center;
     gap: 2%;
     list-style: none;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
   }
   .pc ul li a {
     color: white;
@@ -338,7 +344,7 @@ header p span {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     color: black;
   }
   .reservation div {
@@ -347,7 +353,7 @@ header p span {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     color: rgb(31, 31, 31);
     line-height: 100%;
   }
@@ -407,10 +413,10 @@ main {
       margin: 5% auto;
       padding: 5%;
       color: black;
-      font-size: 1rem;
+      font-size: 1.3rem;
       border: 1px solid black;
       border-radius: 8px;
-      line-height: 1.5rem;
+      line-height: 1.8rem;
     }
     .p1 div {
       width: 80%;
@@ -421,6 +427,7 @@ main {
     .p3 h3 {
       padding: 5%;
       margin-bottom: 5%;
+      font-size: 1.3rem;
     }
     .p2 span,
     .p3 span {
@@ -433,7 +440,7 @@ main {
       gap: 2%;
     }
     .personal-wrapper div {
-      height: 350px;
+      height: 440px;
       padding: 2%;
     }
   }
@@ -503,7 +510,7 @@ main {
 }
 .fstickyh2 {
   position: sticky;
-  top: 15%;
+  top: 19vh;
   margin-bottom: 5%;
 }
 .facility img {
@@ -512,7 +519,7 @@ main {
 }
 .fsticky {
   position: sticky;
-  top: 27%;
+  top: 32vh;
   height: 40vh;
 }
 .facility div p {
@@ -543,18 +550,14 @@ main {
     height: 50vh;
   }
 }
-@media screen and (min-width: 1024px) {
-  .fsticky {
-    top: 30%;
-  }
-}
+
 @media screen and (min-width: 1200px) {
   .fstickyh2 {
-    top: 100px;
+    top: 150px;
   }
   .fsticky {
     height: 78%;
-    top: 200px;
+    top: 300px;
   }
   .facility img {
     height: 400px;
@@ -628,6 +631,24 @@ main {
   .pertner img {
     width: 80%;
   }
+  .partner div:nth-of-type(2) {
+    width: 80%;
+    margin: 5% auto 0;
+  }
+  .partner div:nth-of-type(3) {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .partner div:nth-of-type(3) span {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .partner div p {
+    font-size: 1.5rem;
+  }
+  .partner div p span {
+    font-size: 1.3rem;
+  }
 }
 /* price */
 .price {
@@ -697,6 +718,9 @@ main {
   }
 }
 @media screen and (min-width: 1200px) {
+  .price {
+    margin-top: 10%;
+  }
   .price-wrapper {
     display: flex;
     justify-content: center;
@@ -709,6 +733,7 @@ main {
     height: 350px;
     margin: 0;
     padding: 0.5%;
+    font-size: 1.5rem;
   }
   .price-wrapper div:nth-of-type(2) {
     margin: 0;
@@ -767,15 +792,18 @@ footer ul {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  list-style: none;
 }
 footer ul li {
-  margin: 0 1%;
+  margin: 0;
+  line-height: 1.2rem;
 }
 footer ul li a {
   font-size: 0.5rem;
   text-decoration: none;
   color: black;
-  padding-right: min(3vw, 44px);
+  padding-right: min(2vw, 44px);
+  padding-left: min(2vw, 44px);
   border-right: 1px solid gray;
 }
 footer ul:nth-of-type(1) li:nth-of-type(4) a {
@@ -785,13 +813,21 @@ footer ul:nth-of-type(2) li:nth-of-type(3) a {
   border: none;
 }
 @media screen and (min-width: 400px) {
-  footer ul li {
-    margin: 0 2%;
+  footer {
+    margin-top: 5%;
+    margin-bottom: 15%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   footer {
     margin-bottom: 5%;
     margin-top: 20%;
+  }
+  footer ul li {
+    line-height: 2rem;
+  }
+  footer ul li a {
+    font-size: 1rem;
   }
 }
