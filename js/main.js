@@ -27,6 +27,7 @@
   s.parentNode.insertBefore(tk, s);
 })(document);
 
+// スクロール
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -52,23 +53,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
-// 固定ヘッダーの要素を取得
 const menu = document.querySelector(".menu");
-
-// セクションの位置を取得
 const header = document.querySelector(".header");
-const headerBottom = header.offsetTop + header.offsetHeight; // headerの下端を計算
-
-// スクロールイベントをリッスン
+const headerBottom = header.offsetTop + header.offsetHeight;
 window.addEventListener("scroll", function () {
-  // 現在のスクロール位置
   const scrollY = window.scrollY;
-
-  // スクリーン幅が1000px以下の場合のみ実行
   if (window.innerWidth <= 1200) {
-    // スクロール量がセクションの位置を超えると、ヘッダーを徐々に表示
     if (scrollY > headerBottom) {
-      const opacity = Math.min((scrollY - headerBottom) / 0, 1); // opacityを滑らかに変更
+      const opacity = Math.min((scrollY - headerBottom) / 0, 1);
       menu.classList.add("background");
     } else {
       menu.classList.remove("background");
@@ -76,63 +68,52 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// セクションの位置を取得
 const headerh1 = document.querySelector(".headerh1");
-const headerTop = headerh1.offsetTop; // headerの上端位置を取得
+const headerTop = headerh1.offsetTop;
 const logo = document.querySelector(".logo");
 
-// スクロールイベントをリッスン
 window.addEventListener("scroll", function () {
-  // 現在のスクロール位置
   const scrollY = window.scrollY;
 
-  // スクリーン幅が1200px以下の場合のみ実行
   if (window.innerWidth <= 767) {
-    // headerTopより50px上でlogoが消えるようにする
     if (scrollY > headerTop - 200) {
-      // 50px上でlogoをフェードアウト
-      logo.style.opacity = 0; // opacityを0にしてフェードアウト
+      logo.style.opacity = 0;
     } else {
-      // それ以外の場合はlogoをフェードイン
-      logo.style.opacity = 1; // opacityを1にしてフェードイン
+      logo.style.opacity = 1;
     }
   }
-  // スクリーン幅が1200px以下の場合のみ実行
   if (window.innerWidth <= 1200) {
-    // headerTopより50px上でlogoが消えるようにする
     if (scrollY > headerTop - 200) {
-      // 50px上でlogoをフェードアウト
-      logo.style.opacity = 0; // opacityを0にしてフェードアウト
+      logo.style.opacity = 0;
     } else {
-      // それ以外の場合はlogoをフェードイン
-      logo.style.opacity = 1; // opacityを1にしてフェードイン
+      logo.style.opacity = 1;
     }
   }
-  // スクリーン幅が1200px以上の場合のみ実行
   if (window.innerWidth >= 1200) {
-    // スクロール量がセクションの位置を超えると、logoを非表示
     if (scrollY > headerTop - 200) {
-      logo.style.opacity = 0; // opacityを0にしてフェードアウト
+      logo.style.opacity = 0;
     } else {
-      logo.style.opacity = 1; // opacityを1にしてフェードイン
+      logo.style.opacity = 1;
     }
   }
 });
+
+// ハンバーガーメニュー
 const menuBtn = document.querySelector(".menu");
 const sp = document.querySelector("#sp");
 const closeBtn = document.querySelector(".close");
 const links = document.querySelectorAll("#sp li a");
 
 menuBtn.addEventListener("click", function () {
-  sp.style.display = "block"; // メニューを表示
+  sp.style.display = "block";
 });
 
 closeBtn.addEventListener("click", function () {
-  sp.style.display = "none"; // メニューを非表示
+  sp.style.display = "none";
 });
 
 links.forEach(function (link) {
   link.addEventListener("click", function () {
-    sp.style.display = "none"; // リンククリック時にメニューを非表示
+    sp.style.display = "none";
   });
 });

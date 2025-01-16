@@ -1,3 +1,4 @@
+// フォント
 (function (d) {
   var config = {
       kitId: "xeg1hdh",
@@ -26,6 +27,7 @@
   };
   s.parentNode.insertBefore(tk, s);
 })(document);
+
 document
   .getElementById("reservationForm")
   .addEventListener("submit", function (event) {
