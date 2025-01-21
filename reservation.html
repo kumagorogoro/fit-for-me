@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>施設予約フォーム</title>
     <link rel="stylesheet" href="css/reservation.css" />
-    <script src="js/font.js"></script>
-    <script src="js/reservation.js"></script>
+    <script src="js/font.js" defer></script>
+    <script src="js/reservation.js" defer></script>
   </head>
   <body>
     <div class="form-container">
@@ -54,7 +54,7 @@
         />
         <div id="errorTime" class="error"></div>
 
-        <input type="submit" value="送信" />
+        <input type="submit" id="submit" value="送信" />
       </form>
     </div>
     <a href="index.html">トップページへ戻る</a>
