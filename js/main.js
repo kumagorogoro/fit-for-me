@@ -26,14 +26,13 @@ window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
   if (window.innerWidth <= 1200) {
     if (scrollY > headerBottom) {
-      const opacity = Math.min((scrollY - headerBottom) / 0, 1);
       menu.classList.add("background");
     } else {
       menu.classList.remove("background");
     }
   }
 });
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -41,19 +40,16 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (window.innerWidth <= 767) {
       window.scrollTo({
         top: target.offsetTop - 70,
-        behavior: "smooth",
       });
     }
     if (window.innerWidth >= 767) {
       window.scrollTo({
         top: target.offsetTop - 140,
-        behavior: "smooth",
       });
     }
     if (window.innerWidth >= 1200) {
       window.scrollTo({
         top: target.offsetTop - 150,
-        behavior: "smooth",
       });
     }
   });
@@ -66,14 +62,6 @@ const logo = document.querySelector(".logo");
 
 window.addEventListener("scroll", function () {
   const scrollY = window.scrollY;
-
-  if (window.innerWidth <= 767) {
-    if (scrollY > headerTop - 200) {
-      logo.style.opacity = 0;
-    } else {
-      logo.style.opacity = 1;
-    }
-  }
   if (window.innerWidth <= 1200) {
     if (scrollY > headerTop - 200) {
       logo.style.opacity = 0;
@@ -81,13 +69,4 @@ window.addEventListener("scroll", function () {
       logo.style.opacity = 1;
     }
   }
-  if (window.innerWidth >= 1200) {
-    if (scrollY > headerTop - 200) {
-      logo.style.opacity = 0;
-    } else {
-      logo.style.opacity = 1;
-    }
-  }
 });
-
-
