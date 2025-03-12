@@ -271,10 +271,12 @@ header p span {
     gap: 2%;
     list-style: none;
     font-size: 1.3rem;
+
   }
   .pc ul li a {
-    color: white;
+    color: rgb(255, 231, 133);
     text-decoration: none;
+        text-shadow: #fc0 1px 0 10px;
   }
   .logo {
     display: none;
